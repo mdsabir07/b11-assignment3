@@ -12,22 +12,114 @@
         rel="stylesheet">
     <!-- Fontawsome -->
     <script src="https://kit.fontawesome.com/ec0affd4a9.js" crossorigin="anonymous"></script>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.2/daisyui.css" rel="stylesheet" type="text/css" />
     <!-- Tailwind cdn -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <style type="text/tailwindcss">
         @theme {
           --color-clifford: #da373d;
           --font-adlam: "ADLaM Display", serif;
           --font-sora: "Sora", serif;
         }
-      </style>
+      </style> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pet-primary': '#FFDC26',
+                        'pet-bg': '#F9DF8A',
+                        'pet-bg-light': '#FFF9F4',
+                        'pet-black': '#111111',
+                    },
+                    fontFamily: {
+                        adlam: ['ADLaM Display', 'serif'],
+                        sora: ['Sora', 'serif'],
+                    },
+                    backgroundImage: {
+                        'hero-cat': "url('../c1-assets/cat-big-png')",
+                        // 'footer-texture': "url('/img/footer-texture.png')",
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="font-sora">
     <!-- Start Header -->
-    <header></header>
+    <header class="bg-pet-bg-light">
+        <nav class="container mx-auto">
+            <div class="navbar shadow-sm">
+                <div class="navbar-start">
+                    <a href="" class="flex items-center gap-2">
+                        <img src="./c1-assets/logo-header.png" alt=""><span
+                            class="text-2xl text-pet-black hidden lg:flex"> Browse <span
+                                class="text-pet-primary">4</span> Pets</span>
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Find
+                                a pet</a></li>
+                        <li><a
+                                class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Breeds</a>
+                        </li>
+                        <li><a class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Contact
+                                us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end gap-4">
+                    <a href="" class="hidden lg:flex hover:text-pet-primary"><i class="fa-solid fa-bell"></i></a>
+                    <a href="" class="hidden lg:flex hover:text-pet-primary"><i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+                    <a
+                        class="btn border border-pet-primary text-xl text-pet-black bg-transparent hover:bg-pet-primary hidden lg:flex">Login</a>
+                    <a
+                        class="btn text-xl text-pet-black bg-pet-primary hover:bg-pet-black hover:text-white hidden lg:flex">Register</a>
+                    <div class="lg:hidden dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a
+                                    class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Find
+                                    a pet</a></li>
+                            <li><a
+                                    class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Breeds</a>
+                            </li>
+                            <li><a
+                                    class="text-xl font-normal text-pet-black hover:bg-transparent hover:text-pet-primary">Contact
+                                    us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- Start main -->
-    <main></main>
+    <main>
+        <section class="container mx-auto">
+            <div class="relative">
+                <div class="w-2/5 space-y-6 absolute top-28 left-0">
+                    <h1 class="text-3xl lg:text-6xl font-adlam text-pet-black">Pamper Your Pet, Because They Deserve the Bes</h1>
+                    <p class="text-lg lg:text-xl text-pet-black">
+                        Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
+                    </p>
+                    <a class="btn text-xl text-pet-black bg-pet-primary hover:bg-pet-black hover:text-white">Find a pet</a>
+                </div>
+                <img src="./c1-assets/cat-big.png" alt="" class="w-full">
+            </div>
+        </section>
+    </main>
     <!-- Start Footer -->
     <footer></footer>
 </body>
